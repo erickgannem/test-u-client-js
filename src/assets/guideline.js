@@ -12,7 +12,7 @@ const colors = {
 }
 
 const layout = {
-  padding15: 15
+  iconSize: '3rem'
 }
 
 export { colors, layout }
