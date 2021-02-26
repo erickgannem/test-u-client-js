@@ -7,26 +7,27 @@ import {
 } from 'react-router-dom'
 
 import Navbar from '../Navbar'
+import Exams from '../../views/Exams'
+import Schools from '../../views/Schools'
+import UserProfile from '../../views/UserProfile'
 
-function App () {
+export default function App () {
   return (
     <div className="App">
       <Router >
         <Navbar />
         <Switch>
           <Route exact path='/'>
-            {() => <h1>Home</h1>}
+            <Exams />
           </Route>
-          <Route path='/users'>
-            {() => <h1>Users</h1>}
+          <Route path='/schools'>
+            <Schools />
           </Route>
-          <Route path='/about'>
-            {() => <h1>About</h1>}
+          <Route path='/profile'>
+            <UserProfile />
           </Route>
         </Switch>
       </Router>
     </div>
   )
 }
-
-export default App

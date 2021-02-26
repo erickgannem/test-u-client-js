@@ -13,10 +13,10 @@ export default function Navbar () {
         <Link to='/'><FaUserGraduate size={iconSize}/></Link>
       </Item>
       <Item>
-        <Link to='/about'><FaUniversity size={iconSize}/></Link>
+        <Link to='/schools'><FaUniversity size={iconSize}/></Link>
       </Item>
       <Item>
-        <Link to='/users'><FaUser size={iconSize} /></Link>
+        <Link to='/profile'><FaUser size={iconSize} /></Link>
       </Item>
     </List>
 </Nav>
