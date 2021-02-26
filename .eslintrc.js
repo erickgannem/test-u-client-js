@@ -18,5 +18,7 @@ module.exports = {
     'react'
   ],
   rules: {
+    "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 1}],
+    "eol-last": 2
   }
 }

@@ -12,10 +12,10 @@ export default function Navbar () {
     <Nav>
     <List>
       <Item>
-        <Link to='/'><FaUserGraduate size={iconSize} color={light01} /></Link>
+        <Link to='/'><FaUserGraduate className='homeIcon' size={iconSize}/></Link>
       </Item>
       <Item>
-        <Link to='/about'><FaUniversity size={iconSize} color={light01}/></Link>
+        <Link to='/about'><FaUniversity className='homeIcon' size={iconSize}/></Link>
       </Item>
       <Item>
         <Link to='/users'><FaUser size={iconSize} color={light01}/></Link>

@@ -20,7 +20,7 @@ align-items: center;
 `
 
 const Item = styled.li`
-list-style: none
+list-style: none;
 `
 
 export { Nav, List, Item }
