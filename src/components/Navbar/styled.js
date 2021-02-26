@@ -25,6 +25,7 @@ list-style: none;
 `
 
 const Link = styled(RouterLink)`
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: ${colors.light01};
   ${this}:hover {
     color: ${colors.white}
