@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../assets/guideline'
+import { Link as RouterLink } from 'react-router-dom'
 
 const Nav = styled.nav`
 background-color: ${colors.dark01};
@@ -23,4 +24,11 @@ const Item = styled.li`
 list-style: none;
 `
 
-export { Nav, List, Item }
+const Link = styled(RouterLink)`
+  color: ${colors.light01};
+  ${this}:hover {
+    color: ${colors.white}
+  }
+`
+
+export { Nav, List, Item, Link }

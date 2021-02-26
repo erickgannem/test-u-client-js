@@ -3,6 +3,7 @@ const colors = {
   dark02: '#0E1B26',
   dark03: '#222F3A',
   light01: '#E2E2E2',
+  white: '#EEEEEE',
   blueAccent: '#00A3FF',
   orangeAccent: '#FF9900',
   greenAccent: '#44C23A',

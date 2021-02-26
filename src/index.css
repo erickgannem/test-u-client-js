@@ -13,14 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.homeIcon {
-  color: lightsteelblue
-}
-
-.homeIcon:hover {
-  color: white
-}
-
 /* Responsive =======================*/
 @media (max-width: 1200px){    
   html {
