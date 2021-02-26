@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaUser, FaUniversity, FaUserGraduate } from 'react-icons/fa'
 
-import { Nav, List, Item, Link } from './styled'
+import { Nav, List, Item, Link, Underline } from './styled'
 import { layout } from '../../assets/guideline'
 
 export default function Navbar () {
@@ -19,6 +19,7 @@ export default function Navbar () {
         <Link to='/profile'><FaUser size={iconSize} /></Link>
       </Item>
     </List>
+    <Underline />
 </Nav>
   )
 }

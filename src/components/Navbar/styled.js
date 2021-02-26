@@ -5,12 +5,12 @@ import { Link as RouterLink } from 'react-router-dom'
 const Nav = styled.nav`
 background-color: ${colors.dark01};
 color: ${colors.light01};
-display: flex;
 height: 6rem;
 width: 100%;
 box-decoration-break: none;
 text-decoration: none;
-padding: 0 1rem;
+display: grid;
+position: relative;
 `
 const List = styled.ul`
 display: flex;
@@ -22,6 +22,7 @@ align-items: center;
 
 const Item = styled.li`
 list-style: none;
+padding: 0 1rem;
 `
 
 const Link = styled(RouterLink)`
@@ -32,4 +33,12 @@ const Link = styled(RouterLink)`
   }
 `
 
-export { Nav, List, Item, Link }
+const Underline = styled.span`
+background-color: ${colors.yellowAccent};
+width: 6rem;
+height: 0.3rem;
+bottom: 0;
+position: absolute;
+`
+
+export { Nav, List, Item, Link, Underline }
