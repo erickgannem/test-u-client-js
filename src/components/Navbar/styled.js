@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom'
 const Nav = styled.nav`
 background-color: ${colors.dark01};
 color: ${colors.light01};
-height: 6rem;
+/* height: 6rem; */
 width: 100%;
 box-decoration-break: none;
 text-decoration: none;
@@ -22,7 +22,11 @@ align-items: center;
 
 const Item = styled.li`
 list-style: none;
-padding: 0 1rem;
+padding: 1rem;
+border-bottom: ${
+  ({ isActive }) => isActive ? `0.3rem solid ${colors.greenAccent}` : 'none'
+};
+
 `
 
 const Link = styled(RouterLink)`
@@ -33,12 +37,4 @@ const Link = styled(RouterLink)`
   }
 `
 
-const Underline = styled.span`
-background-color: ${colors.yellowAccent};
-width: 6rem;
-height: 0.3rem;
-bottom: 0;
-position: absolute;
-`
-
-export { Nav, List, Item, Link, Underline }
+export { Nav, List, Item, Link }
