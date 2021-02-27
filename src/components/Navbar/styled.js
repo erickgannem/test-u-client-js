@@ -11,6 +11,7 @@ box-decoration-break: none;
 text-decoration: none;
 display: grid;
 position: relative;
+box-shadow: inset 1rem 0.5rem 0.9rem ${colors.shadow}
 `
 const List = styled.ul`
 display: flex;

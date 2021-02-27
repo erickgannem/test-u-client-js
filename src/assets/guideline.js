@@ -9,7 +9,8 @@ const colors = {
   greenAccent: '#44C23A',
   yellowAccent: '#FFA031',
   brownAccent: '#311E07',
-  logoAccent: '#00A266'
+  logoAccent: '#00A266',
+  shadow: 'rgba(0, 0, 0, 0.3)'
 }
 
 const layout = {
