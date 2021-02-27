@@ -1,9 +1,11 @@
 import React from 'react'
 
+import { View } from '../styled'
+
 export default function Exams () {
   return (
-    <div>
+    <View>
       <h1>Exams Section</h1>
-    </div>
+    </View>
   )
 }
