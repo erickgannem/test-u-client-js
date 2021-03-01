@@ -11,15 +11,15 @@ padding: 1rem;
 `
 
 
-const Button = ({ bgColor, color, borderColor, content }) => {
+const Button = ({ bgColor, color, borderColor, content, margin }) => {
   const Btn = styled.button`
   padding: 1.2rem;
   border-radius: 0.20rem;
   font-size: 1.2rem;
-  border: none;
   background-color: ${bgColor};
   color: ${color};
   border: 0.12rem solid ${borderColor};
+  margin: ${margin || 0};
   
   ${this}:hover {
     cursor: pointer;
@@ -36,7 +36,8 @@ Button.propTypes = {
   bgColor: PropTypes.string,
   color: PropTypes.string,
   borderColor: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  margin: PropTypes.string || PropTypes.number
 }
 
 export { View, Button }
