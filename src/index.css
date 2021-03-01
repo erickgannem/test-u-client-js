@@ -13,12 +13,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  background-color: #0E1B26;
+}
 /* Responsive =======================*/
 @media (max-width: 1200px){    
   html {
-      background-color: #0E1B26;
       font-size: 93.75%; /*15px*/
-
   }
 }
 

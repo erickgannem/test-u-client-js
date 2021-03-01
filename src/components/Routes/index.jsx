@@ -11,15 +11,27 @@ import UserProfile from '../../views/UserProfile'
 export default function Routes () {
   return (
     <Switch>
-    <Route exact path='/'>
-      <Exams />
-    </Route>
-    <Route path='/schools'>
-      <Schools />
-    </Route>
-    <Route path='/profile'>
-      <UserProfile />
-    </Route>
-  </Switch>
+      <Route exact path='/'>
+        {
+          ({ location }) => {
+            return <Exams pathname={location.pathname}/>
+          }
+        }
+      </Route>
+      <Route path='/schools'>
+        {
+          ({ location }) => {
+            return <Schools pathname={location.pathname}/>
+          }
+        }
+      </Route>
+      <Route path='/profile'>
+        {
+          ({ location }) => {
+            return <UserProfile pathname={location.pathname}/>
+          }
+        }
+      </Route>
+    </Switch>
   )
 }
