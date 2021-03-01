@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { View } from '../styled'
+import { View } from '../elements'
+
 
 export default function Schools () {
   return (
