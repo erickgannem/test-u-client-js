@@ -6,7 +6,7 @@ import { colors } from '../../assets/guideline'
 
 
 export default function Exams () {
-  const { dark02, light01 } = colors
+  const { dark02, light01, whiteTransparency, logoAccentTransparency, logoAccent } = colors
   const OPTIONS = ['SIMULAR EXAMEN', 'EXAMEN ALEATORIO', 'EXAMEN POR TEMAS']
   const LETTERS = ['T', 'E', 'S', 'T']
 
@@ -19,15 +19,15 @@ export default function Exams () {
             <Letter
               key={letter}
               content={letter}
-              bgColor='green'
+              bgColor={whiteTransparency}
               color='white'
             />
           )
         }
         <Letter
           content='U'
-          bgColor='blue'
-          color='red'
+          bgColor={logoAccentTransparency}
+          color={logoAccent}
         />
       </LettersRow>
       <SloganRow>

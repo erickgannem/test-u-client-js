@@ -10,6 +10,8 @@ const colors = {
   yellowAccent: '#FFA031',
   brownAccent: '#311E07',
   logoAccent: '#00A266',
+  logoAccentTransparency: 'rgba(0, 162, 102, 0.20)',
+  whiteTransparency: 'rgba(255, 255, 255, 0.20)',
   shadow: 'rgba(0, 0, 0, 0.3)'
 }
 
