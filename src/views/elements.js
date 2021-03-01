@@ -10,23 +10,23 @@ color: ${colors.white};
 padding: 1rem;
 `
 
+const Btn = styled.button`
+padding: 1.2rem;
+border-radius: 0.20rem;
+font-size: 1.2rem;
+width: 19.75rem;
+background-color: ${({ bgColor }) => bgColor};
+color: ${({ color }) => color};
+border: 0.12rem solid ${({ borderColor }) => borderColor};
+margin: ${({ margin }) => margin || 0};
 
+${this}:hover {
+  cursor: pointer;
+}
+`
 const Button = ({ bgColor, color, borderColor, content, margin }) => {
-  const Btn = styled.button`
-  padding: 1.2rem;
-  border-radius: 0.20rem;
-  font-size: 1.2rem;
-  background-color: ${bgColor};
-  color: ${color};
-  border: 0.12rem solid ${borderColor};
-  margin: ${margin || 0};
-  
-  ${this}:hover {
-    cursor: pointer;
-  }
-  `
   return (
-    <Btn>
+    <Btn bgColor={bgColor} color={color} borderColor={borderColor} margin={margin}>
       <b>{content}</b>
     </Btn>
   )

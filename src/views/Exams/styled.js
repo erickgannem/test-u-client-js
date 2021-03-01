@@ -30,10 +30,13 @@ align-items: center
 `
 
 const L = styled.div`
+padding: 0.25rem 0;
+opacity: 20;
+width: 3.6rem;
+font-size:1.5rem;
 justify-content: center;
 align-items: center;
-padding: 1rem;
-opacity: 20;
+text-align: center;
 background-color: ${({ bgColor }) => bgColor};
 color: ${({ color }) => color};
 border-radius: 0.2rem;

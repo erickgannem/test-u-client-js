@@ -4,7 +4,6 @@ import { View, Button } from '../elements'
 import { ButtonsRow, Letter, LettersRow, LogoRow, SloganRow } from './styled'
 import { colors } from '../../assets/guideline'
 
-
 export default function Exams () {
   const { dark02, light01, whiteTransparency, logoAccentTransparency, logoAccent } = colors
   const OPTIONS = ['SIMULAR EXAMEN', 'EXAMEN ALEATORIO', 'EXAMEN POR TEMAS']
@@ -12,7 +11,8 @@ export default function Exams () {
 
   return (
     <View>
-      <LogoRow></LogoRow>
+      <LogoRow>
+      </LogoRow>
       <LettersRow>
         {
           LETTERS.map(letter =>
@@ -20,7 +20,7 @@ export default function Exams () {
               key={letter}
               content={letter}
               bgColor={whiteTransparency}
-              color='white'
+              color={light01}
             />
           )
         }
