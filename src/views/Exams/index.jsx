@@ -6,18 +6,23 @@ import { colors } from '../../assets/guideline'
 
 export default function Exams () {
   const { dark02, light01 } = colors
+  const OPTIONS = ['SIMULAR EXAMEN', 'EXAMEN ALEATORIO', 'EXAMEN POR TEMAS']
   return (
     <View>
       <h1>Exams Section</h1>
-      <Button bgColor={dark02} color={light01} borderColor={light01}>
-        <b>SIMULAR EXAMEN</b>
-      </Button>
-      <Button>
-        <b>EXAMEN ALEATORIO</b>
-      </Button>
-      <Button>
-        <b>EXAMEN POR TEMAS</b>
-      </Button>
+      {
+        OPTIONS.map(option =>
+          <Button
+            key={option}
+            bgColor={dark02}
+            color={light01}
+            borderColor={light01}
+            content={option}
+          />
+        )
+      }
+
+
     </View>
   )
 }
