@@ -1,9 +1,10 @@
 import React from 'react'
+import { View } from '../styled'
 
 export default function Schools () {
   return (
-    <div>
+    <View>
       <h1>Schools Section</h1>
-    </div>
+    </View>
   )
 }
