@@ -3,7 +3,18 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { colors } from '../../assets/guideline'
 
-const LogoRow = styled.div``
+const LogoRow = styled.div`
+display: flex;
+width: 100%;
+margin-top: 1rem;
+margin-bottom: 1rem;
+justify-content: center;
+align-items: center
+`
+
+const LogoBox = styled.div`
+width: 220px;
+`
 
 const LettersRow = styled.div`
 display: flex;
@@ -56,4 +67,4 @@ Letter.propTypes = {
   color: PropTypes.string
 }
 
-export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow }
+export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox }

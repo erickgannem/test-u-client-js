@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { View, Button } from '../elements'
-import { ButtonsRow, Letter, LettersRow, LogoRow, SloganRow } from './styled'
+import { ButtonsRow, Letter, LettersRow, LogoRow, SloganRow, LogoBox } from './styled'
 import { colors } from '../../assets/guideline'
+import logoTestU from '../../assets/Test-u.svg'
 
 export default function Exams () {
   const { dark02, light01, whiteTransparency, logoAccentTransparency, logoAccent } = colors
@@ -12,6 +13,9 @@ export default function Exams () {
   return (
     <View>
       <LogoRow>
+        <LogoBox>
+          <img src={logoTestU} width="100%" height="100%" content-item="center"/>
+        </LogoBox>
       </LogoRow>
       <LettersRow>
         {
