@@ -24,7 +24,7 @@ margin-bottom: 0.5rem;
 
 const SloganRow = styled.div`
 display: flex;
-font-size: 1rem;
+font-size: 1.15rem;
 justify-content: center;
 align-items: center;
 color: ${colors.light01};
