@@ -9,7 +9,7 @@ width: 100%;
 margin-top: 1rem;
 margin-bottom: 1rem;
 justify-content: center;
-align-items: center
+align-items: center;
 `
 
 const LogoBox = styled.div`
@@ -20,7 +20,6 @@ const LettersRow = styled.div`
 display: flex;
 justify-content: center;
 margin-bottom: 0.5rem;
-
 `
 
 const SloganRow = styled.div`
@@ -37,10 +36,10 @@ width: 100%;
 display: grid;
 position: relative;
 justify-content: center;
-align-items: center
+align-items: center;
 `
 
-const L = styled.div`
+const StyledLetter = styled.div`
 padding: 0.25rem 0;
 opacity: 20;
 width: 3.6rem;
@@ -55,9 +54,9 @@ margin: 0 0.2rem;
 `
 const Letter = ({ bgColor, color, content }) => {
   return (
-    <L bgColor={bgColor} color={color}>
+    <StyledLetter bgColor={bgColor} color={color}>
       <h1>{content}</h1>
-    </L>
+    </StyledLetter>
   )
 }
 

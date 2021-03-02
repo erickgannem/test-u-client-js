@@ -26,7 +26,7 @@ const Item = styled.li`
 list-style: none;
 padding: 1rem;
 border-bottom: ${
-  ({ isActive }) => isActive ? `0.3rem solid ${logoAccent}` : 'none'
+  ({ isActive }) => isActive ? `0.3rem solid ${logoAccent}` : `0.3rem solid ${dark01}`
 };
 
 `

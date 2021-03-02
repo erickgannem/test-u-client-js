@@ -21,7 +21,7 @@ export default function Exams () {
         {
           LETTERS.map(letter =>
             <Letter
-              key={letter}
+              key={Math.random()}
               content={letter}
               bgColor={whiteTransparency}
               color={light01}

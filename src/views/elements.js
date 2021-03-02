@@ -10,7 +10,7 @@ color: ${colors.white};
 padding: 1rem;
 `
 
-const Btn = styled.button`
+const StyledButton = styled.button`
 padding: 1.2rem;
 border-radius: 0.20rem;
 font-size: 1.2rem;
@@ -26,9 +26,14 @@ ${this}:hover {
 `
 const Button = ({ bgColor, color, borderColor, content, margin }) => {
   return (
-    <Btn bgColor={bgColor} color={color} borderColor={borderColor} margin={margin}>
+    <StyledButton
+      bgColor={bgColor}
+      color={color}
+      borderColor={borderColor}
+      margin={margin}
+    >
       <b>{content}</b>
-    </Btn>
+    </StyledButton>
   )
 }
 
