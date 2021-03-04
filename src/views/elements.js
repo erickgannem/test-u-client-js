@@ -14,7 +14,7 @@ const StyledButton = styled.button`
 padding: 1.2rem;
 border-radius: 0.20rem;
 font-size: 1.2rem;
-width: 19.75rem;
+width: ${({ width }) => width || '19.75rem'};
 background-color: ${({ bgColor }) => bgColor};
 color: ${({ color }) => color};
 border: 0.12rem solid ${({ borderColor }) => borderColor};
@@ -24,13 +24,14 @@ ${this}:hover {
   cursor: pointer;
 }
 `
-const Button = ({ bgColor, color, borderColor, content, margin }) => {
+const Button = ({ bgColor, color, borderColor, content, margin, width }) => {
   return (
     <StyledButton
       bgColor={bgColor}
       color={color}
       borderColor={borderColor}
       margin={margin}
+      width={width}
     >
       <b>{content}</b>
     </StyledButton>
@@ -42,7 +43,42 @@ Button.propTypes = {
   color: PropTypes.string,
   borderColor: PropTypes.string,
   content: PropTypes.string,
-  margin: PropTypes.string || PropTypes.number
+  margin: PropTypes.string || PropTypes.number,
+  width: PropTypes.width
 }
 
-export { View, Button }
+const StyledInput = styled.input`
+padding: 0.2rem;
+border-radius: 0.20rem;
+font-size: 1rem;
+width: ${({ width }) => width || '15rem'};
+background-color: ${({ bgColor }) => bgColor};
+color: ${({ color }) => color};
+border: 0.12rem solid ${({ borderColor }) => borderColor};
+margin: ${({ margin }) => margin || 0};
+`
+
+const Input = ({ bgColor, color, borderColor, content, margin, width }) => {
+  return (
+    <StyledInput
+      bgColor={bgColor}
+      color={color}
+      borderColor={borderColor}
+      margin={margin}
+      width={width}
+    >
+      <input>{content}</input>
+    </StyledInput>
+  )
+}
+
+Input.propTypes = {
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  borderColor: PropTypes.string,
+  content: PropTypes.string,
+  margin: PropTypes.string || PropTypes.number,
+  width: PropTypes.width
+}
+
+export { View, Button, Input }
