@@ -47,38 +47,16 @@ Button.propTypes = {
   width: PropTypes.width
 }
 
-const StyledInput = styled.input`
-padding: 0.2rem;
-border-radius: 0.20rem;
-font-size: 1rem;
-width: ${({ width }) => width || '15rem'};
-background-color: ${({ bgColor }) => bgColor};
-color: ${({ color }) => color};
-border: 0.12rem solid ${({ borderColor }) => borderColor};
-margin: ${({ margin }) => margin || 0};
+const Input = styled.input`
+padding: 0.7rem;
+border-radius: 0.2rem;
+font-size: 1.2rem;
+width: 18rem;
+background-color: ${colors.dark01};
+color: ${colors.light01};
+border: none;
+margin-bottom: 0.5rem;
+
 `
-
-const Input = ({ bgColor, color, borderColor, content, margin, width }) => {
-  return (
-    <StyledInput
-      bgColor={bgColor}
-      color={color}
-      borderColor={borderColor}
-      margin={margin}
-      width={width}
-    >
-      <input>{content}</input>
-    </StyledInput>
-  )
-}
-
-Input.propTypes = {
-  bgColor: PropTypes.string,
-  color: PropTypes.string,
-  borderColor: PropTypes.string,
-  content: PropTypes.string,
-  margin: PropTypes.string || PropTypes.number,
-  width: PropTypes.width
-}
 
 export { View, Button, Input }

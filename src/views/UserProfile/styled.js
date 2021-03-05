@@ -4,19 +4,19 @@ import { colors } from '../../assets/guideline'
 const ImgUserDiv = styled.div`
 display: flex;
 width: 100%;
-margin-top: 1rem;
-margin-bottom: 1rem;
+margin-top: 3rem;
+margin-bottom: 2rem;
 justify-content: center;
 align-items: center;
 `
 
-const ImgBox = styled.div`
-height: 220px;
-width: 220px;
-box-sizing: border-box;
+const ImgBox = styled.img`
+height: 200px;
+width: 200px;
 border-radius: 50%;
 
 `
+
 const TitleRow = styled.div`
 display: flex;
 font-size: 1.15rem;
@@ -36,12 +36,13 @@ align-items: center;
 
 const InputRow = styled.div`
 width: 100%;
-height: 8rem;
 display: grid;
 position: relative;
 justify-content: center;
 align-items: center;
-margin-bottom:1rem;
+padding: 0.5rem;
+margin-bottom: 1.5rem;
+margin-top: 0.6rem;
 `
 
 export { ImgUserDiv, ImgBox, TitleRow, ButtonRow, InputRow }

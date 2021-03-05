@@ -1,26 +1,23 @@
 import React from 'react'
 
-import { View, Button } from '../elements'
+import { View, Button, Input } from '../elements'
 import { ImgUserDiv, ImgBox, TitleRow, ButtonRow, InputRow } from './styled'
 import { colors } from '../../assets/guideline'
 import imgUser from '../../assets/Samir.jpg'
 
 export default function UserProfile () {
   const { light01, blueAccent } = colors
-  const DATUSER = ['Samir Gannem', 'sgannem@gmail.com', '+55 (66) 9 9933-1539']
-  const DATUSERACAD = ['Biologia', 'Química', 'Física']
+  const DATUSER = ['Samir Gannem', 'erickgannem@gmail.com', '+55 (66) 9 9933-1539', 'Endereco']
+  const DATUSERACAD = ['Biologia', 'Química', 'Física', 'matematica']
 
   return (
     <View>
       <ImgUserDiv>
-        <ImgBox>
-          <img
+        <ImgBox
             src={imgUser}
             width="100%"
             height="100%"
-            content-item="center"
-          />
-        </ImgBox>
+        />
       </ImgUserDiv>
       <TitleRow>
         <h2>
@@ -30,11 +27,10 @@ export default function UserProfile () {
       <InputRow>
         {
           DATUSER.map(option =>
-            <input
+            <Input
               key={option}
               defaultValue={option}
-              type="text"
-              />
+            />
           )
         }
       </InputRow>
@@ -46,10 +42,9 @@ export default function UserProfile () {
       <InputRow>
         {
           DATUSERACAD.map(option =>
-            <input
+            <Input
               key={option}
               defaultValue={option}
-              type="text"
               />
           )
         }
