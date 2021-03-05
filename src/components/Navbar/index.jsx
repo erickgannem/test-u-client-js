@@ -12,8 +12,8 @@ export default function Navbar () {
   return (
     <Nav>
       <List>
-        <Item isActive={pathname === '/' && true}>
-          <Link to='/'>
+        <Item isActive={pathname === '/exams' && true}>
+          <Link to='/exams'>
             <FaUserGraduate size={iconSize}/>
           </Link>
         </Item>
