@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { colors } from '../../assets/guideline'
-import { AiFillGoogleCircle } from 'react-icons/ai'
+import logoGoogle from '../../assets/GoogleG.svg'
 
 
 const StyledButtonG = styled.button`
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 0.3rem 1.5rem 0.3rem 0;
+padding: 0.8rem 1.5rem 0.8rem 1.5rem;
 border-radius: 0.20rem;
 font-size: 1.2rem;
 width: ${({ width }) => width || '19.75rem'};
@@ -31,8 +31,7 @@ const ButtonG = ({ bgColor, color, borderColor, content, margin, width }) => {
       margin={margin}
       width={width}
     >
-      <span></span>
-      <AiFillGoogleCircle color={colors.blueAccent} size='3rem'/>
+      <img src={logoGoogle} width="40rem" height="40rem"/>
       <b>{content}</b>
     </StyledButtonG>
   )
