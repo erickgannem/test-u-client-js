@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { View, Button } from '../elements'
-import { ButtonsRow, Letter, LettersRow, LogoRow, SloganRow, LogoBox } from './styled'
+import { ButtonG, ButtonsRow, Letter, LettersRow, LogoRow, SloganRow, LogoBox } from './styled'
 import { colors } from '../../assets/guideline'
 import logoTestU from '../../assets/Test-u.svg'
-import { AiFillGoogleCircle } from 'react-icons/ai'
 
 export default function Login () {
   const { dark02, light01, whiteTransparency, logoAccentTransparency, logoAccent } = colors
@@ -54,18 +53,15 @@ export default function Login () {
           content="REGISTRARSE"
           margin='0.25rem'
         />
-        <Button
-          bgColor={dark02}
-          color={light01}
+        <ButtonG
+          bgColor={colors.light01}
+          color={colors.blueAccent}
           borderColor={light01}
-          content="REGISTRARSE CON"
+          content="ENTRAR CON GOOGLE"
           margin='0.25rem'
         >
-          <AiFillGoogleCircle />
-        </Button>
-
+        </ButtonG>
       </ButtonsRow>
-
     </View>
   )
 }

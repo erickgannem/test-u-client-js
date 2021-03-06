@@ -2,6 +2,50 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { colors } from '../../assets/guideline'
+import { AiFillGoogleCircle } from 'react-icons/ai'
+
+
+const StyledButtonG = styled.button`
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0.3rem 1.5rem 0.3rem 0;
+border-radius: 0.20rem;
+font-size: 1.2rem;
+width: ${({ width }) => width || '19.75rem'};
+background-color: ${({ bgColor }) => bgColor};
+color: ${({ color }) => color};
+border: 0.12rem solid ${({ borderColor }) => borderColor};
+margin: ${({ margin }) => margin || 0};
+
+${this}:hover {
+  cursor: pointer;
+}
+`
+const ButtonG = ({ bgColor, color, borderColor, content, margin, width }) => {
+  return (
+    <StyledButtonG
+      bgColor={bgColor}
+      color={color}
+      borderColor={borderColor}
+      margin={margin}
+      width={width}
+    >
+      <span></span>
+      <AiFillGoogleCircle color={colors.blueAccent} size='3rem'/>
+      <b>{content}</b>
+    </StyledButtonG>
+  )
+}
+
+ButtonG.propTypes = {
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  borderColor: PropTypes.string,
+  content: PropTypes.string,
+  margin: PropTypes.string || PropTypes.number,
+  width: PropTypes.width
+}
 
 const LogoRow = styled.div`
 display: flex;
@@ -66,4 +110,4 @@ Letter.propTypes = {
   color: PropTypes.string
 }
 
-export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox }
+export { ButtonG, LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox }
