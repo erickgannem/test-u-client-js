@@ -55,7 +55,7 @@ export default function Login () {
         />
         <ButtonG
           bgColor={colors.light01}
-          color={colors.blueAccent}
+          color={colors.dark01}
           borderColor={light01}
           content="ENTRAR CON GOOGLE"
           margin='0.25rem'
