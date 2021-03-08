@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { View, Button } from '../elements'
-import { ButtonG, ButtonsRow, Letter, LettersRow, LogoRow, SloganRow, LogoBox } from './styled'
+import { ButtonsRow, Letter, LettersRow, LogoRow, SloganRow, LogoBox } from './styled'
 import { colors } from '../../assets/guideline'
 import logoTestU from '../../assets/Test-u.svg'
+import logoGoogle from '../../assets/GoogleG.svg'
 
 export default function Login () {
   const { dark02, light01, whiteTransparency, logoAccentTransparency, logoAccent } = colors
@@ -53,14 +54,15 @@ export default function Login () {
           content="REGISTRARSE"
           margin='0.25rem'
         />
-        <ButtonG
+        <Button
           bgColor={colors.light01}
           color={colors.dark01}
           borderColor={light01}
           content="ENTRAR CON GOOGLE"
           margin='0.25rem'
+          imgSource={logoGoogle}
         >
-        </ButtonG>
+        </Button>
       </ButtonsRow>
     </View>
   )

@@ -11,7 +11,14 @@ padding: 1rem;
 `
 
 const StyledButton = styled.button`
-padding: 1.2rem;
+${
+  props => props.imgSource && `
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  `
+};
+padding: ${props => props.imgSource ? '0.8rem 1.5rem 0.8rem 1.5rem' : '1.2rem'};
 border-radius: 0.20rem;
 font-size: 1.2rem;
 width: ${({ width }) => width || '19.75rem'};
@@ -24,7 +31,7 @@ ${this}:hover {
   cursor: pointer;
 }
 `
-const Button = ({ bgColor, color, borderColor, content, margin, width }) => {
+const Button = ({ bgColor, color, borderColor, content, margin, width, imgSource }) => {
   return (
     <StyledButton
       bgColor={bgColor}
@@ -32,19 +39,12 @@ const Button = ({ bgColor, color, borderColor, content, margin, width }) => {
       borderColor={borderColor}
       margin={margin}
       width={width}
+      imgSource={imgSource}
     >
+      {imgSource && <img src={imgSource} width="40rem" height="40rem"/>}
       <b>{content}</b>
     </StyledButton>
   )
-}
-
-Button.propTypes = {
-  bgColor: PropTypes.string,
-  color: PropTypes.string,
-  borderColor: PropTypes.string,
-  content: PropTypes.string,
-  margin: PropTypes.string || PropTypes.number,
-  width: PropTypes.width
 }
 
 const Input = styled.input`
@@ -56,7 +56,79 @@ background-color: ${colors.dark01};
 color: ${colors.light01};
 border: none;
 margin-bottom: 0.5rem;
-
 `
 
-export { View, Button, Input }
+const LogoRow = styled.div`
+display: flex;
+width: 100%;
+margin-top: 1rem;
+margin-bottom: 1rem;
+justify-content: center;
+align-items: center;
+`
+
+const LogoBox = styled.div`
+width: 220px;
+`
+
+const LettersRow = styled.div`
+display: flex;
+justify-content: center;
+margin-bottom: 0.5rem;
+`
+
+const SloganRow = styled.div`
+display: flex;
+font-size: 1.15rem;
+justify-content: center;
+align-items: center;
+color: ${colors.light01};
+margin-bottom: 2rem;
+`
+
+const ButtonsRow = styled.div`
+width: 100%;
+display: grid;
+position: relative;
+justify-content: center;
+align-items: center;
+`
+
+const StyledLetter = styled.div`
+padding: 0.25rem 0;
+opacity: 20;
+width: 3.6rem;
+font-size:1.5rem;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: ${({ bgColor }) => bgColor};
+color: ${({ color }) => color};
+border-radius: 0.2rem;
+margin: 0 0.2rem;
+`
+const Letter = ({ bgColor, color, content }) => {
+  return (
+    <StyledLetter bgColor={bgColor} color={color}>
+      <h1>{content}</h1>
+    </StyledLetter>
+  )
+}
+
+Letter.propTypes = {
+  content: PropTypes.string,
+  bgColor: PropTypes.string,
+  color: PropTypes.string
+}
+
+Button.propTypes = {
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  borderColor: PropTypes.string,
+  content: PropTypes.string,
+  margin: PropTypes.string || PropTypes.number,
+  width: PropTypes.string || PropTypes.number,
+  imgSource: PropTypes.string || undefined
+}
+
+export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox, View, Button, Input }
