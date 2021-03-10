@@ -8,6 +8,7 @@ import Home from '../../views/Home'
 import Exams from '../../views/Exams'
 import Schools from '../../views/Schools'
 import UserProfile from '../../views/UserProfile'
+import TestSimulator from '../../views/TestSimulator'
 
 export default function Routes () {
   return (
@@ -16,6 +17,7 @@ export default function Routes () {
       <Route exact path='/exams' component={Exams} />
       <Route exact path='/schools' component={Schools} />
       <Route exact path='/profile' component={UserProfile} />
+      <Route exact path='/TestSimulator' component={TestSimulator} />
     </Switch>
   )
 }

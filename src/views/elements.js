@@ -4,6 +4,71 @@ import PropTypes from 'prop-types'
 
 import { colors } from '../assets/guideline'
 
+const SubjectsProps = styled.div`
+font-size: 0.8rem;
+width: 100%;
+background-color: ${colors.dark02};
+color: ${colors.light01};
+margin: ${({ margin }) => margin || 0};
+`
+
+const SubjectsText = ({ margin, bgColor, color, content }) => {
+  return (
+    <SubjectsProps bgColor={bgColor} color={color} margin={margin}>
+      <h1>{content}</h1>
+    </SubjectsProps>
+  )
+}
+
+SubjectsText.propTypes = {
+  content: PropTypes.string,
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  margin: PropTypes.string
+}
+
+
+const TestRowBody = styled.div`
+display: flex;
+width: 100%;
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+padding: 0 12%;
+justify-content: space-around;
+text-align: center;
+`
+
+const InfoRow = styled.div`
+font-size: 2rem;
+justify-content: space-around;
+align-items: center;
+color: ${colors.light01};
+margin-left: 2rem;
+margin-right: 2rem;
+margin-top: 0rem;
+margin-bottom: 3rem;
+`
+
+const TestRow = styled.div`
+display: flex;
+width: 100%;
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+justify-content: center;
+align-items: center;
+border-color: ${colors.dark02};
+border-bottom: ${colors.light01};
+border-width: 3px;
+border-style: solid;
+
+`
+
+const TestTittle = styled.div`
+margin-left: 2rem;
+font-size: 2.5rem;
+font-weight: 700;
+`
+
 const View = styled.div`
 background-color: ${colors.dark02};
 color: ${colors.white};
@@ -131,4 +196,4 @@ Button.propTypes = {
   imgSource: PropTypes.string || undefined
 }
 
-export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox, View, Button, Input }
+export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestTittle, InfoRow, TestRowBody, SubjectsText }
