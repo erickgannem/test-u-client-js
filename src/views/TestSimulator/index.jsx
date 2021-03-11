@@ -3,27 +3,17 @@ import React from 'react'
 import { View, Button } from '../elements'
 import { TestRowBody, TestRow, TestTittle, InfoRow, LogoBox, ButtonsRow, SubjectsText } from './styled'
 import { colors } from '../../assets/guideline'
-import imgBack from '../../assets/back.png'
-import imgTest from '../../assets/imgTest.png'
-import imgStopwatch from '../../assets/stopwatch.png'
+
+import { FaArrowLeft } from 'react-icons/fa'
+import { TiStopwatch, TiThList } from 'react-icons/ti'
 
 const DATSUBJECTS = ['- Biologia', '- Química', '- Física', '- Matematica', '- Filosofia']
 
 export default function Exams () {
-  const { dark02, light01 } = colors
-
   return (
     <View>
       <TestRow>
-        <Button
-            bgColor={dark02}
-            color={light01}
-            borderColor={dark02}
-            content={''}
-            margin='0.25rem'
-            width='1rem'
-            imgSource={imgBack}
-          />
+        <FaArrowLeft size = '2.5rem'/>
           <TestTittle>
             Examen simulado
           </TestTittle>
@@ -44,10 +34,10 @@ export default function Exams () {
       </InfoRow>
       <TestRowBody>
         <LogoBox>
-          <img src={imgTest} height="70%"/>
+          <TiThList size = '8rem'/>
         </LogoBox>
         <LogoBox>
-          <img src={imgStopwatch} height="70%"/>
+          <TiStopwatch size = '8rem'/>
         </LogoBox>
       </TestRowBody>
       <TestRowBody>
@@ -66,7 +56,8 @@ export default function Exams () {
           color={colors.dark01}
           borderColor={colors.orangeAccent}
           content="CONTINUAR"
-          margin='2rem'
+          margin='0.25rem'
+          width='16rem'
         >
         </Button>
       </ButtonsRow>

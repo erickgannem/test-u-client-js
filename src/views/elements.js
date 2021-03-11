@@ -51,11 +51,14 @@ margin-bottom: 3rem;
 
 const TestRow = styled.div`
 display: flex;
-width: 100%;
+width: 110%;
+height: 5rem;
+margin-left: -1.5rem;
 margin-top: 0.5rem;
 margin-bottom: 0.5rem;
-justify-content: center;
+justify-content: left;
 align-items: center;
+padding: 0.2rem 0.7rem 1.5rem 0.7rem;
 border-color: ${colors.dark02};
 border-bottom: ${colors.light01};
 border-width: 3px;
@@ -64,7 +67,11 @@ border-style: solid;
 `
 
 const TestTittle = styled.div`
-margin-left: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 80%;
+margin-left: 1rem;
 font-size: 2.5rem;
 font-weight: 700;
 `
@@ -83,10 +90,10 @@ ${
   justify-content: space-between;  
   `
 };
-padding: ${props => props.imgSource ? '0.8rem 1.5rem 0.8rem 1.5rem' : '1.2rem'};
+padding: ${props => props.imgSource ? '0.8rem 1.5rem 0.8rem 0.75rem' : '1.2rem'};
 border-radius: 0.20rem;
-font-size: 1.2rem;
-width: ${({ width }) => width || '19.75rem'};
+font-size: 1.5rem;
+width: ${({ width }) => width || '22.75rem'};
 background-color: ${({ bgColor }) => bgColor};
 color: ${({ color }) => color};
 border: 0.12rem solid ${({ borderColor }) => borderColor};
@@ -133,7 +140,12 @@ align-items: center;
 `
 
 const LogoBox = styled.div`
-width: 220px;
+display: flex;
+width: 13.75rem;
+justify-content: center;
+justify-content: bottom;
+align-items: center;
+
 `
 
 const LettersRow = styled.div`

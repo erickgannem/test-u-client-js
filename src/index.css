@@ -41,7 +41,13 @@ html {
 
 @media (max-width: 320px){
   html {
-      font-size: 68.75%; /*11px*/
+      font-size: 62.5%; /*10px *11px 68.75%*/
+  }
+}
+
+@media (max-width: 240px){
+  html {
+      font-size: 50%; /*8px */
   }
 }
 

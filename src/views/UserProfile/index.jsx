@@ -56,7 +56,7 @@ export default function UserProfile () {
           borderColor={blueAccent}
           content='SALVAR'
           margin='0.25rem'
-          width='10rem'
+          width='16rem'
         />
       </ButtonRow>
 
