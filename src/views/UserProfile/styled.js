@@ -11,8 +11,8 @@ align-items: center;
 `
 
 const ImgBox = styled.img`
-height: 200px;
-width: 200px;
+height: 15rem;
+width: 15rem;
 border-radius: 50%;
 
 `

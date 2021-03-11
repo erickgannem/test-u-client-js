@@ -113,7 +113,7 @@ const Button = ({ bgColor, color, borderColor, content, margin, width, imgSource
       width={width}
       imgSource={imgSource}
     >
-      {imgSource && <img src={imgSource} width="40rem" height="40rem"/>}
+      {imgSource && <img src={imgSource} width="15%" height="15%"/>}
       <b>{content}</b>
     </StyledButton>
   )
