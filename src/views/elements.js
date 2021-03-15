@@ -27,15 +27,13 @@ border-style: solid;
 
 `
 const TestTittleQst = styled.div`
-width: 100%;
 margin-left: 1rem;
 font-size: 2.5rem;
 font-weight: 700;
 `
 const TestTittleQstHead = styled.div`
-width: 100%;
 margin: 1.5rem 0 0.3rem 1rem;
-font-size: 1.35rem;
+font-size: 1.5rem;
 font-weight: 500;
 color: ${colors.greenAccent};
 `
@@ -44,7 +42,6 @@ const SubjectsPropsQst = styled.div`
 ${
   props => props.imgSource && `
   display: flex;
-  align-items: left;
   justify-content: left;
   `
 };
@@ -54,7 +51,6 @@ min-height: 5rem;
 padding: 0.5rem 1.5rem;
 background-color: ${colors.dark01};
 align-items: center;
-text-align: left;
 color: ${colors.light01};
 margin: ${({ margin }) => margin || 0};
 `
@@ -68,7 +64,9 @@ const SubjectsTextQst = ({ margin, bgColor, color, content, imgSource }) => {
       imgSource={imgSource}
     >
       {imgSource && <img src={imgSource} width="30rem" height="30rem"/>}
-      <h1>{content}</h1>
+      <h1>
+        {content}
+      </h1>
     </SubjectsPropsQst>
   )
 }

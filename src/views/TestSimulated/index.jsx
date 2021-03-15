@@ -27,7 +27,7 @@ export default function Exams () {
               <SubjectsTextQst
                 key={option}
                 content={option}
-                margin="2rem 1rem 2rem 0.5rem"
+                margin="2rem 1.8rem 2rem 1.5rem"
                 imgSource={select}
                 />
             )
@@ -38,7 +38,7 @@ export default function Exams () {
             color={colors.dark01}
             borderColor={colors.greenAccent}
             content="CONTINUAR"
-            margin='2rem -0.25rem 2rem 0'
+            margin='2rem 0'
             width='16rem'
           >
           </Button>
