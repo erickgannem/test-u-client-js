@@ -9,6 +9,7 @@ import Exams from '../../views/Exams'
 import Schools from '../../views/Schools'
 import UserProfile from '../../views/UserProfile'
 import TestSimulator from '../../views/TestSimulator'
+import TestSimulated from '../../views/TestSimulated'
 
 export default function Routes () {
   return (
@@ -18,6 +19,7 @@ export default function Routes () {
       <Route exact path='/schools' component={Schools} />
       <Route exact path='/profile' component={UserProfile} />
       <Route exact path='/TestSimulator' component={TestSimulator} />
+      <Route exact path='/TestSimulated' component={TestSimulated} />
     </Switch>
   )
 }

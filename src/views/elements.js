@@ -4,6 +4,92 @@ import PropTypes from 'prop-types'
 
 import { colors } from '../assets/guideline'
 
+const ViewHeadQst = styled.div`
+background-color: ${colors.dark02};
+color: ${colors.white};
+`
+const ViewQst = styled.div`
+background-color: ${colors.dark03};
+color: ${colors.white};
+width:100%;
+padding: 2rem;
+`
+const TestRowQst = styled.div`
+display: block;
+min-height: 5rem;
+margin-top: 0.5rem;
+text-align: left;
+padding: 0.2rem 0.7rem 1.5rem 0.7rem;
+border-color: ${colors.dark02};
+border-bottom: ${colors.greenAccent};
+border-width: 3px;
+border-style: solid;
+
+`
+const TestTittleQst = styled.div`
+width: 100%;
+margin-left: 1rem;
+font-size: 2.5rem;
+font-weight: 700;
+`
+const TestTittleQstHead = styled.div`
+width: 100%;
+margin: 1.5rem 0 0.3rem 1rem;
+font-size: 1.35rem;
+font-weight: 500;
+color: ${colors.greenAccent};
+`
+
+const SubjectsPropsQst = styled.div`
+${
+  props => props.imgSource && `
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  `
+};
+border-radius: 1rem;
+font-size: 0.8rem;
+min-height: 5rem;
+padding: 0.5rem 1.5rem;
+background-color: ${colors.dark01};
+align-items: center;
+text-align: left;
+color: ${colors.light01};
+margin: ${({ margin }) => margin || 0};
+`
+
+const SubjectsTextQst = ({ margin, bgColor, color, content, imgSource }) => {
+  return (
+    <SubjectsPropsQst
+      bgColor={bgColor}
+      color={color}
+      margin={margin}
+      imgSource={imgSource}
+    >
+      {imgSource && <img src={imgSource} width="30rem" height="30rem"/>}
+      <h1>{content}</h1>
+    </SubjectsPropsQst>
+  )
+}
+
+SubjectsTextQst.propTypes = {
+  content: PropTypes.string,
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  margin: PropTypes.string,
+  imgSource: PropTypes.string || undefined
+}
+
+const ButtonsRowQst = styled.div`
+width: 100%;
+display: grid;
+position: relative;
+justify-content: right;
+align-items: center;
+padding: 3rem;
+`
+
 const SubjectsProps = styled.div`
 font-size: 0.8rem;
 width: 100%;
@@ -208,4 +294,4 @@ Button.propTypes = {
   imgSource: PropTypes.string || undefined
 }
 
-export { LogoRow, LettersRow, ButtonsRow, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestTittle, InfoRow, TestRowBody, SubjectsText }
+export { ViewHeadQst, ViewQst, LogoRow, LettersRow, ButtonsRow, ButtonsRowQst, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestRowQst, TestTittle, TestTittleQst, InfoRow, TestRowBody, SubjectsText, SubjectsTextQst, TestTittleQstHead }
