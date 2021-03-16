@@ -24,13 +24,54 @@ border-color: ${colors.dark02};
 border-bottom: ${colors.greenAccent};
 border-width: 3px;
 border-style: solid;
+`
+
+const SelectQst = styled.div`
+display: flex;
+border-radius: 50%;
+min-width: 2rem;
+min-height: 2rem;
+border-color: ${colors.greenAccent};
+background: rgba(0, 0, 0, 0);
+border-width: 3px;
+border-style: solid;
+margin-right: 1rem;
+
+${this}:hover {
+  cursor: pointer;
+  background: ${colors.greenAccent};
+}
 
 `
+
+const TestTittleQstRem = styled.div`
+display: flex;
+`
+
 const TestTittleQst = styled.div`
 margin-left: 1rem;
 font-size: 2.5rem;
 font-weight: 700;
 `
+
+const StyledRemainQst = styled.div`
+font-size: 2.5rem;
+font-weight: 700;
+color: ${colors.whiteTransparency};
+
+`
+const RemainQst = ({ content }) => {
+  return (
+    <StyledRemainQst>
+      <p>{content}</p>
+    </StyledRemainQst>
+  )
+}
+
+RemainQst.propTypes = {
+  content: PropTypes.string
+}
+
 const TestTittleQstHead = styled.div`
 margin: 1.5rem 0 0.3rem 1rem;
 font-size: 1.5rem;
@@ -41,10 +82,10 @@ color: ${colors.greenAccent};
 const SubjectsPropsQst = styled.div`
 ${
   props => props.imgSource && `
-  display: flex;
-  justify-content: left;
   `
 };
+display: flex;
+justify-content: left;
 border-radius: 1rem;
 font-size: 0.8rem;
 min-height: 5rem;
@@ -64,6 +105,7 @@ const SubjectsTextQst = ({ margin, bgColor, color, content, imgSource }) => {
       imgSource={imgSource}
     >
       {imgSource && <img src={imgSource} width="30rem" height="30rem"/>}
+      <SelectQst/>
       <h1>
         {content}
       </h1>
@@ -80,12 +122,10 @@ SubjectsTextQst.propTypes = {
 }
 
 const ButtonsRowQst = styled.div`
-width: 100%;
 display: grid;
-position: relative;
 justify-content: right;
 align-items: center;
-padding: 3rem;
+padding: 0 0.5rem 0 0;
 `
 
 const SubjectsProps = styled.div`
@@ -127,8 +167,8 @@ font-size: 2rem;
 justify-content: space-around;
 align-items: center;
 color: ${colors.light01};
-margin-left: 2rem;
-margin-right: 2rem;
+margin-left: 0rem;
+margin-right: 0rem;
 margin-top: 0rem;
 margin-bottom: 3rem;
 `
@@ -292,4 +332,47 @@ Button.propTypes = {
   imgSource: PropTypes.string || undefined
 }
 
-export { ViewHeadQst, ViewQst, LogoRow, LettersRow, ButtonsRow, ButtonsRowQst, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestRowQst, TestTittle, TestTittleQst, InfoRow, TestRowBody, SubjectsText, SubjectsTextQst, TestTittleQstHead }
+const Watch = styled.div`
+display: flex;
+font-size: 2rem;
+font-weight: 700;
+padding: 0.7rem 0 0.7rem 2rem;
+`
+
+const StyledWatchMin = styled.div`
+margin-left: 1rem;
+color: ${colors.greenAccent};
+`
+const WatchMin = ({ content }) => {
+  return (
+    <StyledWatchMin>
+      <p>
+        {content}
+      </p>
+    </StyledWatchMin>
+  )
+}
+
+WatchMin.propTypes = {
+  content: PropTypes.string
+}
+
+const StyledWatchSec = styled.div`
+color: ${colors.whiteTransparency};
+margin-left: 0.5rem;
+`
+const WatchSec = ({ content }) => {
+  return (
+    <StyledWatchSec>
+      <p>
+        {content}
+      </p>
+    </StyledWatchSec>
+  )
+}
+
+WatchSec.propTypes = {
+  content: PropTypes.string
+}
+
+export { Watch, WatchMin, WatchSec, TestTittleQstRem, RemainQst, ViewHeadQst, ViewQst, LogoRow, LettersRow, ButtonsRow, ButtonsRowQst, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestRowQst, TestTittle, TestTittleQst, InfoRow, TestRowBody, SubjectsText, SubjectsTextQst, TestTittleQstHead }

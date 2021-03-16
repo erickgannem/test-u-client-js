@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { ViewQst, ViewHeadQst, Button } from '../elements'
-import { TestRowQst, TestTittleQst, InfoRow, ButtonsRowQst, SubjectsTextQst, TestTittleQstHead } from './styled'
+import { ViewQst, ViewHeadQst, Button, Watch } from '../elements'
+import { WatchMin, WatchSec, TestTittleQstRem, RemainQst, TestRowQst, TestTittleQst, InfoRow, ButtonsRowQst, SubjectsTextQst, TestTittleQstHead } from './styled'
 import { colors } from '../../assets/guideline'
-import select from '../../assets/checked.svg'
 
 const DATSUBJECTS = ['La membrana interna posee mayor lípido', 'La membrana interna es más permeable qe la externa', 'La membrana interna no posee pliegues', 'La membrana interna posee la ATP sintasa para la sintesis de ATP']
 
@@ -14,9 +13,14 @@ export default function Exams () {
           <TestTittleQstHead>
             Prueba simulada
           </TestTittleQstHead>
-          <TestTittleQst>
-            Pregunta 1
-          </TestTittleQst>
+          <TestTittleQstRem>
+            <TestTittleQst>
+              Pregunta 1
+            </TestTittleQst>
+            <RemainQst
+              content="/60"
+            />
+          </TestTittleQstRem>
       </TestRowQst>
       <ViewQst>
         <InfoRow>
@@ -27,8 +31,7 @@ export default function Exams () {
               <SubjectsTextQst
                 key={option}
                 content={option}
-                margin="2rem 1.8rem 2rem 1.5rem"
-                imgSource={select}
+                margin="2rem 0"
                 />
             )
           }
@@ -44,6 +47,15 @@ export default function Exams () {
           </Button>
         </ButtonsRowQst>
       </ViewQst>
+      <Watch>
+        Tiempo restante
+      <WatchMin
+        content=" 58 :"
+      />
+      <WatchSec
+        content=" 25"
+      />
+      </Watch>
     </ViewHeadQst>
   )
 }
