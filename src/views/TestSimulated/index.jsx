@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { ViewQst, ViewHeadQst, Button, Watch } from '../elements'
-import { WatchMin, WatchSec, TestTittleQstRem, RemainQst, TestRowQst, TestTittleQst, InfoRow, ButtonsRowQst, SubjectsTextQst, TestTittleQstHead } from './styled'
+import { Watchtimer } from '../watchTimer'
+import { ViewQst, ViewHeadQst, Button } from '../elements'
+import { TestTittleQstRem, RemainQst, TestRowQst, TestTittleQst, InfoRow, ButtonsRowQst, SubjectsTextQst, TestTittleQstHead } from './styled'
 import { colors } from '../../assets/guideline'
 
 const DATSUBJECTS = ['La membrana interna posee mayor lípido', 'La membrana interna es más permeable qe la externa', 'La membrana interna no posee pliegues', 'La membrana interna posee la ATP sintasa para la sintesis de ATP']
@@ -47,15 +48,7 @@ export default function Exams () {
           </Button>
         </ButtonsRowQst>
       </ViewQst>
-      <Watch>
-        Tiempo restante
-      <WatchMin
-        content=" 58 :"
-      />
-      <WatchSec
-        content=" 25"
-      />
-      </Watch>
+      <Watchtimer/>
     </ViewHeadQst>
   )
 }

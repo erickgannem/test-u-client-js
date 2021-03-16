@@ -338,9 +338,19 @@ font-size: 2rem;
 font-weight: 700;
 padding: 0.7rem 0 0.7rem 2rem;
 `
+const WatchTittle = styled.div`
+margin-right: 1.5rem;
+`
+
+const WatchSep = styled.div`
+margin-left: 0.5rem;
+margin-right: 0.5rem;
+margin-top: -0.15rem;
+`
+
 
 const StyledWatchMin = styled.div`
-margin-left: 1rem;
+margin-left: 0.15rem;
 color: ${colors.greenAccent};
 `
 const WatchMin = ({ content }) => {
@@ -359,7 +369,7 @@ WatchMin.propTypes = {
 
 const StyledWatchSec = styled.div`
 color: ${colors.whiteTransparency};
-margin-left: 0.5rem;
+margin-left: 0.15rem;
 `
 const WatchSec = ({ content }) => {
   return (
@@ -375,4 +385,4 @@ WatchSec.propTypes = {
   content: PropTypes.string
 }
 
-export { Watch, WatchMin, WatchSec, TestTittleQstRem, RemainQst, ViewHeadQst, ViewQst, LogoRow, LettersRow, ButtonsRow, ButtonsRowQst, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestRowQst, TestTittle, TestTittleQst, InfoRow, TestRowBody, SubjectsText, SubjectsTextQst, TestTittleQstHead }
+export { WatchTittle, WatchSep, Watch, WatchMin, WatchSec, TestTittleQstRem, RemainQst, ViewHeadQst, ViewQst, LogoRow, LettersRow, ButtonsRow, ButtonsRowQst, Letter, SloganRow, LogoBox, View, Button, Input, TestRow, TestRowQst, TestTittle, TestTittleQst, InfoRow, TestRowBody, SubjectsText, SubjectsTextQst, TestTittleQstHead }
