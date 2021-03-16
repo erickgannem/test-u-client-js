@@ -9,8 +9,9 @@ const containerStyle = {
 }
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: -33.024533,
+  lng: -71.565448,
+  zoom: 25
 }
 
 function Schools () {

@@ -3,7 +3,7 @@ import React from 'react'
 import { View, Button, Input } from '../elements'
 import { ImgUserDiv, ImgBox, TitleRow, ButtonRow, InputRow } from './styled'
 import { colors } from '../../assets/guideline'
-import imgUser from '../../assets/Samir.jpg'
+import imgUser from '../../assets/User.jpg'
 
 export default function UserProfile () {
   const { light01, blueAccent } = colors
