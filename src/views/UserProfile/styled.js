@@ -19,30 +19,28 @@ border-radius: 50%;
 
 const TitleRow = styled.div`
 display: flex;
-font-size: 1.15rem;
+font-size: 2.5rem;
 justify-content: center;
 align-items: center;
 color: ${colors.light01};
-margin-bottom: 0.2rem;
+margin-bottom: 1.5rem;
+font-weight: 700;
 `
 
 const ButtonRow = styled.div`
 width: 100%;
-display: grid;
+display: flex;
 position: relative;
 justify-content: center;
 align-items: center;
 `
 
 const InputRow = styled.div`
-width: 100%;
-display: grid;
-position: relative;
+display: flex;
+flex-direction: column;
 justify-content: center;
-align-items: center;
 padding: 0.5rem;
-margin-bottom: 1.5rem;
-margin-top: 0.6rem;
+margin: 0.6rem 3rem 1.5rem 3rem;
 `
 
 export { ImgUserDiv, ImgBox, TitleRow, ButtonRow, InputRow }

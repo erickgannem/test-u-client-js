@@ -37,8 +37,8 @@ WatchMin.propTypes = {
 }
 
 const StyledWatchSec = styled.div`
-color: ${colors.whiteTransparency};
 margin-left: 0.15rem;
+color: ${colors.whiteTransparency};
 `
 const WatchSec = ({ content }) => {
   return (

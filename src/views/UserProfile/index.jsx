@@ -7,7 +7,7 @@ import imgUser from '../../assets/User.jpg'
 
 export default function UserProfile () {
   const { light01, blueAccent } = colors
-  const DATUSER = ['Samir Gannem', 'erickgannem@gmail.com', '+55 (66) 9 9933-1539', 'Endereco']
+  const DATUSER = ['Pedro Paulo', 'pedropaulo@gmail.com', '+99 (99) 9 9999-9999', 'Avenida Academia # 99, Distrito Federal']
   const DATUSERACAD = ['Biologia', 'Química', 'Física', 'matematica']
 
   return (
@@ -20,9 +20,9 @@ export default function UserProfile () {
         />
       </ImgUserDiv>
       <TitleRow>
-        <h2>
+        <p>
           Datos Personales
-        </h2>
+        </p>
       </TitleRow>
       <InputRow>
         {
@@ -35,9 +35,9 @@ export default function UserProfile () {
         }
       </InputRow>
       <TitleRow>
-        <h2>
+        <p>
           Datos Academicos
-        </h2>
+        </p>
       </TitleRow>
       <InputRow>
         {
