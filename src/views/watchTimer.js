@@ -55,8 +55,9 @@ WatchSec.propTypes = {
 }
 
 export function Watchtimer () {
-  const [time, setTime] = useState(60 * 60)
-  const minutes = Math.floor(time / 60)
+  const [time, setTime] = useState(90 * 60)
+  const hours = Math.floor(time / 60 / 60)
+  const minutes = Math.floor((time - hours * 60 * 60) / 60)
   const seconds = time % 60
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
@@ -75,19 +76,15 @@ export function Watchtimer () {
     <Watch>
       <WatchTittle>
         Tiempo restante
-        </WatchTittle>
+      </WatchTittle>
+      <WatchMin content={hours}/>
+      <WatchSep>:</WatchSep>
       <WatchMin
-        content={minuteLeft}
-      />
-      <WatchMin
-        content={minuteRight}
+        content={minuteLeft.concat(minuteRight)}
       />
       <WatchSep>:</WatchSep>
       <WatchSec
-        content={secondLeft}
-      />
-      <WatchSec
-        content={secondRight}
+        content={secondLeft.concat(secondRight)}
       />
     </Watch>
   )

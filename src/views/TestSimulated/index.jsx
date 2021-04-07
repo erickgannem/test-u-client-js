@@ -5,7 +5,15 @@ import { Button } from '../elements'
 import { ViewQst, ViewHeadQst, TestTittleQstRem, RemainQst, TestRowQst, TestTittleQst, InfoRow, ButtonsRowQst, SubjectsTextQst, TestTittleQstHead } from './styled'
 import { colors } from '../../assets/guideline'
 
-const DATSUBJECTS = ['La membrana interna posee mayor lípido', 'La membrana interna es más permeable qe la externa', 'La membrana interna no posee pliegues', 'La membrana interna posee la ATP sintasa para la sintesis de ATP']
+const TOTALQUESTIONS = ['/'].concat([String(60)])
+const DATSUBJECTS = [
+  '1',
+  'La membrana mitocondrial interna se diferencia de la externa dado que:',
+  'La membrana interna posee mayor lípido',
+  'La membrana interna es más permeable qe la externa',
+  'La membrana interna no posee pliegues',
+  'La membrana interna posee la ATP sintasa para la sintesis de ATP'
+]
 
 export default function Exams () {
   return (
@@ -16,26 +24,27 @@ export default function Exams () {
           </TestTittleQstHead>
           <TestTittleQstRem>
             <TestTittleQst>
-              Pregunta 1
+              {'Pregunta '.concat(DATSUBJECTS[0])}
             </TestTittleQst>
             <RemainQst
-              content="/60"
+              content={TOTALQUESTIONS}
             />
           </TestTittleQstRem>
       </TestRowQst>
       <ViewQst>
         <InfoRow>
-          La membrana mitocondrial interna se diferencia de la externa dado que:
+          {DATSUBJECTS[1]}
         </InfoRow>
-          {
-            DATSUBJECTS.map(option =>
-              <SubjectsTextQst
-                key={option}
-                content={option}
-                margin="2rem 0"
-                />
-            )
-          }
+        {
+          DATSUBJECTS.map((option, index) =>
+            index > 1 &&
+            <SubjectsTextQst
+              key={option}
+              content={option}
+              margin="2rem 0"
+            />
+          )
+        }
         <ButtonsRowQst>
           <Button
             bgColor={colors.greenAccent}
