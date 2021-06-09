@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Watchtimer } from '../watchTimer'
-import { Button } from '../elements'
+import { Button, ButtonHead } from '../elements'
 import { ViewQst, ViewHeadQst, TestTittleQstRem, RemainQst, TestRowQst, TestTittleQst, InfoRow, ButtonsRowQst, SubjectsTextQst, TestTittleQstHead } from './styled'
 import { colors } from '../../assets/guideline'
 
@@ -47,24 +47,24 @@ export default function Exams () {
         }
         <ButtonsRowQst>
           <Button
-            bgColor={colors.greenAccent}
+            bgColor={colors.orangeAccent}
             color={colors.dark01}
-            borderColor={colors.greenAccent}
+            borderColor={colors.orangeAccent}
             content="CONTINUAR"
             margin='2rem 0'
             width='16rem'
           >
           </Button>
-          <Button
+          <ButtonHead
             to='/exams'
-            bgColor={colors.orangeAccent}
-            color={colors.dark01}
-            borderColor={colors.orangeAccent}
-            content="ABANDONAR"
-            margin='2rem 0'
-            width='16rem'
+            bgColor={colors.dark02}
+            color={colors.white}
+            borderColor={colors.greenAccent}
+            content="VOLVER: Este botón no estará disponible en versión final"
+            margin='0rem 0'
+            width='23rem'
           >
-          </Button>
+          </ButtonHead>
         </ButtonsRowQst>
       </ViewQst>
       <Watchtimer/>

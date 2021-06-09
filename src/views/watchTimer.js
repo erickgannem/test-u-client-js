@@ -55,7 +55,7 @@ WatchSec.propTypes = {
 }
 
 export function Watchtimer () {
-  const [time, setTime] = useState(90 * 60)
+  const [time, setTime] = useState(120 * 60)
   const hours = Math.floor(time / 60 / 60)
   const minutes = Math.floor((time - hours * 60 * 60) / 60)
   const seconds = time % 60

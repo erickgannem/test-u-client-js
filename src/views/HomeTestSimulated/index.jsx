@@ -26,13 +26,14 @@ export default function Exams () {
         {/* </TestRow>  <FaArrowLeft size='2.5rem' />
         </ButtonHead> */}
         <TestTittle>
-          Examen simulado
+          Examen aleatorio
           </TestTittle>
       </TestRow>
       <View>
 
         <InfoRow>
-          A continuacón será generada una prueba simulada basada en sus datos academicos. Las preguntas responderán las siguientes materias
+          A continuacón será generada una prueba aleatoria podría no estar basada en sus datos academicos. Las preguntas podrán o no incluir las siguientes materias.
+          Haga click en continuar cuando esté listo.
         </InfoRow>
         <InfoRow>
           {
@@ -65,6 +66,7 @@ export default function Exams () {
         </TestRowBody>
         <ButtonsRow>
           <Button
+            to='/TestSimulated'
             bgColor={colors.orangeAccent}
             color={colors.dark01}
             borderColor={colors.orangeAccent}

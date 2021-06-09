@@ -1,11 +1,12 @@
 import React from 'react'
 
 import { View, Button, ButtonHead } from '../elements'
-import { ImageBox, TestRowBody, TestRow, TestTittle, InfoRow, ButtonsRow, SubjectsText } from './styled'
+import { SubjectsTextQst } from '../TestSimulated/styled'
+import { TestRow, TestTittle, InfoRow, ButtonsRow } from './styled'
 import { colors } from '../../assets/guideline'
 
 // import { FaArrowLeft } from 'react-icons/fa'
-import { TiStopwatch, TiThList } from 'react-icons/ti'
+// import { TiStopwatch, TiThList } from 'react-icons/ti'
 import backArrow from '../../assets/arrowLeft48.png'
 
 const DATSUBJECTS = ['- Biologia', '- Química', '- Física', '- Matematica', '- Filosofia']
@@ -23,46 +24,25 @@ export default function Exams () {
           width='2,5rem'
           imgSource={backArrow}
         />
-        {/* </TestRow>  <FaArrowLeft size='2.5rem' />
-        </ButtonHead> */}
         <TestTittle>
-          Examen simulado
+          Examen por temas
           </TestTittle>
       </TestRow>
       <View>
 
         <InfoRow>
-          A continuacón será generada una prueba simulada basada en sus datos academicos. Las preguntas responderán las siguientes materias
-        </InfoRow>
-        <InfoRow>
+          A continuacón será generada una prueba simulada basada en las materias seleccionas. Por favos seleccione las materias y haga click en continuar.
           {
-            DATSUBJECTS.map(option =>
-              <SubjectsText
+            DATSUBJECTS.map((option, index) =>
+              <SubjectsTextQst
                 key={option}
                 content={option}
-                margin="0.5rem 0 0 2rem"
+                margin="0"
               />
             )
           }
+          La cantidad de preguntas y el tiempo estará condicionado a los temas seleccionados.
         </InfoRow>
-        <TestRowBody>
-          <ImageBox>
-            <TiThList size='5.5rem' />
-          </ImageBox>
-          <ImageBox>
-            <TiStopwatch size='5.5rem' />
-          </ImageBox>
-        </TestRowBody>
-        <TestRowBody>
-          <ImageBox>
-            <p>60</p>
-            <p>Preguntas</p>
-          </ImageBox>
-          <ImageBox>
-            <p>120</p>
-            <p>Minutos</p>
-          </ImageBox>
-        </TestRowBody>
         <ButtonsRow>
           <Button
             bgColor={colors.orangeAccent}

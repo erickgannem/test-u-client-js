@@ -48,7 +48,7 @@ export default function Exams () {
           margin='0.25rem'
         />
         <Button
-          to='/TestSimulated'
+          to='/HomeTestSimulated'
           bgColor={dark02}
           color={light01}
           borderColor={light01}
@@ -56,7 +56,7 @@ export default function Exams () {
           margin='0.25rem'
         />
         <Button
-          to='/exams'
+          to='/TestSelect'
           bgColor={dark02}
           color={light01}
           borderColor={light01}
