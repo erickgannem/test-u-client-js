@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { View, Button } from '../elements'
+import { View, Button, ButtonHead } from '../elements'
 import { ImageBox, TestRowBody, TestRow, TestTittle, InfoRow, ButtonsRow, SubjectsText } from './styled'
 import { colors } from '../../assets/guideline'
 
-import { FaArrowLeft } from 'react-icons/fa'
+// import { FaArrowLeft } from 'react-icons/fa'
 import { TiStopwatch, TiThList } from 'react-icons/ti'
+import backArrow from '../../assets/arrowLeft48.png'
 
 const DATSUBJECTS = ['- Biologia', '- Química', '- Física', '- Matematica', '- Filosofia']
 
@@ -13,9 +14,19 @@ export default function Exams () {
   return (
     <>
       <TestRow>
-        <FaArrowLeft size = '2.5rem'/>
-          <TestTittle>
-            Examen simulado
+        <ButtonHead
+          to='/exams'
+          bgColor={colors.dark01}
+          color={colors.white}
+          borderColor={colors.dark01}
+          margin='0 0'
+          width='2,5rem'
+          imgSource={backArrow}
+        />
+        {/* </TestRow>  <FaArrowLeft size='2.5rem' />
+        </ButtonHead> */}
+        <TestTittle>
+          Examen simulado
           </TestTittle>
       </TestRow>
       <View>
@@ -30,16 +41,16 @@ export default function Exams () {
                 key={option}
                 content={option}
                 margin="0.5rem 0 0 2rem"
-                />
+              />
             )
           }
         </InfoRow>
         <TestRowBody>
           <ImageBox>
-            <TiThList size = '5.5rem'/>
+            <TiThList size='5.5rem' />
           </ImageBox>
           <ImageBox>
-            <TiStopwatch size = '5.5rem'/>
+            <TiStopwatch size='5.5rem' />
           </ImageBox>
         </TestRowBody>
         <TestRowBody>
@@ -60,8 +71,7 @@ export default function Exams () {
             content="CONTINUAR"
             margin='4rem 0'
             width='16rem'
-          >
-          </Button>
+          />
         </ButtonsRow>
       </View>
     </>

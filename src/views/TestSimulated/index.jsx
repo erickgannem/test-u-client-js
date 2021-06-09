@@ -55,6 +55,16 @@ export default function Exams () {
             width='16rem'
           >
           </Button>
+          <Button
+            to='/exams'
+            bgColor={colors.orangeAccent}
+            color={colors.dark01}
+            borderColor={colors.orangeAccent}
+            content="ABANDONAR"
+            margin='2rem 0'
+            width='16rem'
+          >
+          </Button>
         </ButtonsRowQst>
       </ViewQst>
       <Watchtimer/>

@@ -7,14 +7,13 @@ import logoTestU from '../../assets/Test-u.svg'
 
 export default function Exams () {
   const { dark02, light01, whiteTransparency, logoAccentTransparency, logoAccent } = colors
-  const OPTIONS = ['SIMULAR EXAMEN', 'EXAMEN ALEATORIO', 'EXAMEN POR TEMAS']
   const LETTERS = ['T', 'E', 'S', 'T']
 
   return (
     <View>
       <LogoRow>
         <LogoBox>
-          <img src={logoTestU} width="100%" height="100%" content-item="center"/>
+          <img src={logoTestU} width="100%" height="100%" content-item="center" />
         </LogoBox>
       </LogoRow>
       <LettersRow>
@@ -40,18 +39,30 @@ export default function Exams () {
         </span>
       </SloganRow>
       <ButtonsRow>
-        {
-          OPTIONS.map(option =>
-            <Button
-              key={option}
-              bgColor={dark02}
-              color={light01}
-              borderColor={light01}
-              content={option}
-              margin='0.25rem'
-            />
-          )
-        }
+        <Button
+          to='/TestSimulator'
+          bgColor={dark02}
+          color={light01}
+          borderColor={light01}
+          content='SIMULAR EXAMEN'
+          margin='0.25rem'
+        />
+        <Button
+          to='/TestSimulated'
+          bgColor={dark02}
+          color={light01}
+          borderColor={light01}
+          content='EXAMEN ALEATORIO'
+          margin='0.25rem'
+        />
+        <Button
+          to='/exams'
+          bgColor={dark02}
+          color={light01}
+          borderColor={light01}
+          content='EXAMEN POR TEMAS'
+          margin='0.25rem'
+        />
       </ButtonsRow>
 
     </View>

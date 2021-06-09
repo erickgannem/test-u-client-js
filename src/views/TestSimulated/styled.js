@@ -123,10 +123,22 @@ SubjectsTextQst.propTypes = {
 }
 
 const ButtonsRowQst = styled.div`
-display: grid;
-justify-content: right;
+width: 100%;
+display: flex;
+gap: 1rem;
+position: relative;
+justify-content: center;
 align-items: center;
-padding: 0 0.5rem 0 0;
+
+
+// width: 100%;
+// flex: wrap;
+// gap: 1rem;
+// flex-direction: right;
+// justify-content: right;
+// align-items: right;
+// justify-items: right;
+// padding: 0 0.5rem 0 0;
 `
 
 export { ViewQst, ViewHeadQst, TestTittleQstRem, RemainQst, ButtonsRowQst, Letter, LettersRow, LogoRow, SloganRow, LogoBox, TestRowQst, TestTittleQst, InfoRow, TestRowBody, SubjectsTextQst, TestTittleQstHead }

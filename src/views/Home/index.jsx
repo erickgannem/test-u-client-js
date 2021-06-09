@@ -41,6 +41,7 @@ export default function Login () {
       </SloganRow>
       <ButtonsRow>
         <Button
+          to="/exams"
           bgColor={dark02}
           color={light01}
           borderColor={light01}
@@ -48,6 +49,7 @@ export default function Login () {
           margin='0.25rem'
         />
         <Button
+          to='/exams'
           bgColor={dark02}
           color={light01}
           borderColor={light01}
@@ -55,6 +57,7 @@ export default function Login () {
           margin='0.25rem'
         />
         <Button
+          to='/exams'
           bgColor={colors.light01}
           color={colors.dark01}
           borderColor={light01}
