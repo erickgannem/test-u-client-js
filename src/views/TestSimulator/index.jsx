@@ -65,6 +65,7 @@ export default function Exams () {
         </TestRowBody>
         <ButtonsRow>
           <Button
+            to='/TestSimulated'
             bgColor={colors.orangeAccent}
             color={colors.dark01}
             borderColor={colors.orangeAccent}

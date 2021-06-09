@@ -63,6 +63,14 @@ export default function Exams () {
           content='EXAMEN POR TEMAS'
           margin='0.25rem'
         />
+        <Button
+          to='/'
+          bgColor={dark02}
+          color={light01}
+          borderColor='red'
+          content='CERRAR SESIÓN'
+          margin='0.25rem'
+        />
       </ButtonsRow>
 
     </View>
